@@ -6,12 +6,18 @@ const todoSchema = new mongoose.Schema({
         required: false,
         min: 3,
         max: 20
-    }, description: {
+    },
+     description: {
         type: String,
-    }, isCompleted: {
+    },
+     isCompleted: {
         type: Boolean,
         default: false
-    }, 
+    },
+     userId : {
+        type: String, 
+        required: true
+    }
 
 }, { timestamps: true })
 module.exports = mongoose.model("todos", todoSchema)
